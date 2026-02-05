@@ -1,50 +1,57 @@
-# Front-end Exercise
+# QA Engineer Exercise
 
-Welcome to the front-end technical exercise. The purpose of this is to test your React knowledge by building a fun and simple pokemon app. 
+Welcome to the QA technical exercise. The app has been fully implemented and is ready for testing. Your task is to write Playwright tests to verify the functionality.
 
-First, thank you for considering Apex and for taking the time out of your busy day to interview with us. We know interviewing can be stressful. We are here to help you succeed, both by talking through the problem and making suggestions as you code. We all make typos along the way, and want to help you catch any of those to save time. Please ask questions at any point during the exercise if something is unclear. Take a deep breath, and let's begin.
+## About the App
 
-## Pokedex App
+A Pokemon collection app that allows users to search and capture Pokemon using the [PokeAPI](https://pokeapi.co).
 
-The purpose of this interview is to test your react knowledge by building a fun and simple application that fetches and displays Pokemon data from PokeAPI. 
+**Features:**
+- Search Pokemon by name or ID
+- Display Pokemon details: image, name, ID, types, and stats (HP, Attack, Defense, Speed)
+- Capture Pokemon to your party (up to 6 maximum)
+- Release captured Pokemon by clicking on them
+- Capture the same Pokemon multiple times
 
-First, we will go over the acceptance criteria and ask for your solution design. Talk us through what steps that you will take to meet the Acceptance Criteria. 
+**Limitations:**
+- Maximum 6 Pokemon can be captured at once
+- Requires valid Pokemon name or ID from PokeAPI
+- Real API calls - requires internet connection
 
-## Pokedex
+## Quick Start
 
-You are creating a simple Pokemon App that allows you to search for any pokemon and add it to your captured list. You will be using the PokeAPI. Pokemon data can be fetched at [https://pokeapi.co/api/v2/pokemon/pikachu](https://pokeapi.co/api/v2/pokemon/pikachu) (Replace "pikachu" with a pokemon name or id). Please view the design below and the acceptance criteria.
+1. Install dependencies and browsers:
+   ```bash
+   yarn install
+   npx playwright install
+   ```
 
-![poke app](public/poke-app.png)
+2. Run the app to familiarize yourself with it:
+   ```bash
+   yarn dev
+   ```
+   Open http://localhost:5173 and test all features manually.
 
-### Acceptance Criteria
+3. Run Playwright tests in UI mode:
+   ```bash
+   yarn test:e2e:ui
+   ```
 
-1. Users can search any pokemon by name or id and display it's information.
-    1. Front-facing image
-    2. Name
-    3. ID/Name
-    4. List all types associated.
-    5. List 4 stats. (HP, Attack, Defense, Speed) 
-2. Capture Button
-    1. Pressing the "Capture" button adds the current Pokemon to list on the right.
-        1. Can capture the same pokemon multiple times.
-        2. Can only capture up to 6 pokemon.
-3. Captured List
-    1. Displays all captured Pokemon images stacked vertically.
-    2. Clicking on a captured Pokemon removes it from the list.
+## Your Task
 
-### Technical notes
+Implement 2-3 end-to-end tests in `tests/e2e.spec.ts`. Each test has TODO comments explaining what to verify.
 
-- Use react with typescript.
-- Use any style library you are comfortable with. (We use Chakra-ui).
-- Use additional libraries if needed.
+### Recommended Tests to Implement:
+1. **"should complete full pokemon collection workflow"** - Basic flow: search, capture, release
+2. **"should handle multiple search and capture cycles"** - Search and capture 5 different pokemon
+3. **"should handle reaching and managing max capacity"** - Test 6 pokemon limit
 
-### Additional notes
-- User experience is important.
-- State management is important.
-- Styling doesn’t need to match example image but try to make it reasonably nice looking.
-- Write unit tests if you have time. 
+## Available Scripts
 
-## Running App
+- `yarn test:e2e` - Run all tests (headless)
+- `yarn test:e2e:ui` - Run with UI mode (recommended for development)
+- `yarn test:e2e:headed` - Run with browser visible
+- `yarn test:e2e:debug` - Debug mode with step-through
 
-`yarn install`
-`yarn dev`
+
+Good luck! 🚀
