@@ -1,21 +1,26 @@
 # QA Engineer Exercise
 
-Welcome to the QA technical exercise. The app has been fully implemented and is ready for testing. Your task is to write Playwright tests to verify the functionality.
+Welcome to the QA technical exercise. The app has been fully implemented and is ready for testing. Your task is to write Playwright tests to ensure the implementation meets AC and did not miss edge cases.
 
 ## About the App
 
 A Pokemon collection app that allows users to search and capture Pokemon using the [PokeAPI](https://pokeapi.co).
 
 **Features:**
-- Search Pokemon by name or ID
-- Display Pokemon details: image, name, ID, types, and stats (HP, Attack, Defense, Speed)
-- Capture Pokemon to your party (up to 6 maximum)
-- Release captured Pokemon by clicking on them
-- Capture the same Pokemon multiple times
+- Can search for a Pokemon by name or ID
+- Displays the following Pokemon details
+   - Image
+   - Name
+   - ID
+   - Type
+   - Stats (HP, Attack, Defense, and Speed)
+- The user can capture Pokemon up to 6 Pokemon
+- The user can release captured Pokemon by selecting them
+- The user can capture the same Pokemon multiple times
 
 **Limitations:**
-- Maximum 6 Pokemon can be captured at once
-- Requires valid Pokemon name or ID from PokeAPI
+- A maximum 6 Pokemon can be captured at once
+- The search requires a valid Pokemon name or ID from PokeAPI
 - Real API calls - requires internet connection
 
 ## Quick Start
@@ -39,12 +44,11 @@ A Pokemon collection app that allows users to search and capture Pokemon using t
 
 ## Your Task
 
-Implement 2-3 end-to-end tests in `tests/e2e.spec.ts`. Each test has TODO comments explaining what to verify.
+Plan and write end-to-end tests in `tests/e2e.spec.ts` that ensure the work has been implemented following the criteria above. Identify gaps or missing details from the requirements that may be discovered during testing.
 
-### Recommended Tests to Implement:
-1. **"should complete full pokemon collection workflow"** - Basic flow: search, capture, release
-2. **"should handle multiple search and capture cycles"** - Search and capture 5 different pokemon
-3. **"should handle reaching and managing max capacity"** - Test 6 pokemon limit
+### FYI
+1. Feel free to ask as many clarifying questions as needed
+2. If needed, you are welcome to browse for documentation
 
 ## Available Scripts
 
